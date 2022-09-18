@@ -15,9 +15,11 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('type');
             $table->string('title');
             $table->string('content');
             $table->timestamps();
+
         });
     }
 

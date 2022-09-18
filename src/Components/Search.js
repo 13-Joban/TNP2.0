@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 export default class Search extends Component {
   render() {
+    console.log('hi from search component ');
     return (
       <div>
         <div className="input-group mb-3 search-box">
