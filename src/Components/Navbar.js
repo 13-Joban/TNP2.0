@@ -1,26 +1,25 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { Link } from 'react-router-dom';
 
-export default class Navbar extends Component {
-  render() {
-    console.log('hi from Navabr component ');
-    return (
-      <div>
-         <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed">
-  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-    <span className="navbar-toggler-icon"></span>
-  </button>
-  <a className="navbar-brand" href="/">Training and Placement Cell 2.0</a>
-
-  <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
-    <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li className="nav-item active">
-        <a className="nav-link" href="/">About <span className="sr-only">(current)</span></a>
-      </li>
-    </ul>
-   
+export default function Navbar() {
+  
+  return ( 
+  <nav className="navbar-expand-lg navbar-dark bg-primary fixed navbar-container">
+  <div className="left-divs">
+  <div className="logo">
+  <img src="https://www.tnpgndec.com/images/logo.png?1ea92a3c4c181e2543ff351723276c24" alt="" />
   </div>
+  <div className="h5-title">
+  <a href="/" >Training and Placement Cell 2.0</a>
+  </div>
+  </div>
+  <div className="right-divs">
+    <button className='createPost-btn btn btn-primary'>
+    <Link className="navbar-brand" to='/createPost'>Create Post</Link>
+    </button>
+  </div>
+  
 </nav>
-      </div>
+      
     )
-  }
 }

@@ -1,32 +1,22 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
-// import Features from './Features';
-
-export default class PostList extends Component {
-  render() {
-    const Posts = this.props.posts;
-    console.log('hi from PostList component ');
-    return (
-      <div>
-      
-      {
-        Posts.map(  post  =>
-        
-        <div className="card text-center post">
-  <div className="card-header">
-    Announcement
-  </div>
-  <div className="card-body">
-    <h5 className="card-title">{post.title}</h5>
-    <p className="card-text">{post.content}</p>
-    <Link to={`/posts/${post.id}`} className="btn btn-primary">View Post</Link>
-  </div>
+import React  from 'react'
+import Post from './Post'
+export default function PostList (props) {
   
-</div>)
-       
-        
-      }
+    const {posts} = props;
+    return (
+      <div className='postlist-container'>
+      <h3>Latest Posts</h3>
+      {
+       posts.map(  post  =>   
+     <Post
+      id ={post.id}  
+      type={post.type}
+      title={post.title}
+      content={post.content} 
+      key={post.id} 
+
+      />
+)}
       </div>
     )
-  }
 }
