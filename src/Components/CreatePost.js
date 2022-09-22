@@ -8,7 +8,7 @@ export default function CreatePost (props) {
       content: ''
     })
 
-   const onFormSubmit = event => {
+  const onFormSubmit = event => {
     // prevent form submit
     event.preventDefault();
   
@@ -21,14 +21,13 @@ export default function CreatePost (props) {
       clearFormFields();
     }
   };
-
   const handleChange = event => {
     const { name, value } = event.target;
       post[name] = value;
       setPost(post)
   };
 
-  const  formValidation = () => {
+  const formValidation = () => {
     // title 
     if (document.getElementsByName("title")[0].value === "") {
       alert("Enter Title ");
