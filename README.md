@@ -24,7 +24,9 @@ Database - PhPMyAdmin(MYSQL)
 ![Screenshot (354)](https://user-images.githubusercontent.com/74794315/192112787-115c8b76-f9eb-4923-9399-89b52a7c6705.png)
 
 5. DELETE A POST
-\\
+\
+![Screenshot (355)](https://user-images.githubusercontent.com/74794315/192113500-c9dbae33-e70a-40be-a747-3224b91c6c23.png)
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
