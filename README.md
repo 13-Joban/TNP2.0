@@ -31,14 +31,8 @@ Database - PhPMyAdmin(MYSQL)
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
-
-In the project directory, you can run:
-##For Front End
-
-### `npm start`
-
-Runs the app in the development mode.\![Screenshot (350)](https://user-images.githubusercontent.com/74794315/192102740-bd581b59-d361-47f8-b880-d9559bc844ef.png)
-
+## For Frontend
+    npm start 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## For Backend
