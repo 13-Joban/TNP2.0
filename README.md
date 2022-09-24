@@ -21,6 +21,8 @@ Database - PhPMyAdmin(MYSQL)
 \
 4  EDIT A POST \
 \
+![Screenshot (354)](https://user-images.githubusercontent.com/74794315/192112787-115c8b76-f9eb-4923-9399-89b52a7c6705.png)
+
 5. DELETE A POST
 \\
 
