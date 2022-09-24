@@ -1,17 +1,17 @@
 # Tnp Full Stack Website 
 
-Tech Stack 
-FrontEnd - ReactJs
-Styling - CSS , Bootstrap
-Backend - Laravel 8 
-Database - PhPMyAdmin(MYSQL)
+Tech Stack. 
+FrontEnd - ReactJs.
+Styling - CSS , Bootstrap.
+Backend - Laravel 8 .
+Database - PhPMyAdmin(MYSQL).
 
 # Features :
-1  GET ALL POSTS ( SORTED IN RECENTLY UPDATED ON THE FIRST)
-2. SHOW A SINGLE POST
-3. CREATE A NEW POST
-4  EDIT A POST
-5. DELETE A POST
+1  GET ALL POSTS ( SORTED IN RECENTLY UPDATED ON THE FIRST).
+2. SHOW A SINGLE POST.
+3. CREATE A NEW POST.
+4  EDIT A POST.
+5. DELETE A POST.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
