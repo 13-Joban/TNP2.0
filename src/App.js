@@ -11,23 +11,21 @@ import ShowPost from './Components/ShowPost'
 import EditPost from './Components/EditPost'
 import DeletePost from './Components/DeletePost'
 
+
 export default function App () {
   const [posts, setPosts] = useState([])
   const [post, setPost] = useState({})
-  // const [loading, setLoading] = useState(false)
   const navigate = useNavigate();
 
   useEffect(() => {
-    // setLoading(true)
     fetchPosts().then(res => {
         // check status for response and set data accordingly
 
-        setPosts(res.data.Posts);
+        setPosts(res.data.Posts)
         // setLoading(false)
-        // log the data
-        // console.log(res.data)
+      
     })  
-  },[])
+  }, [])
 
  const fetchPosts = async () => {
     const posts = await axios.get('http://localhost:8000/api/posts')
@@ -36,7 +34,7 @@ export default function App () {
 
  const onFormSubmit = data => {
       createPost(data);
-  }
+}
 
  const createPost = async (data) => {
     // this.setState({ loader: true });
@@ -53,7 +51,7 @@ export default function App () {
     } catch (error) {
       console.log(error);
     }
-  };
+};
  const getPost = async (id) => {
     try{
       const post = await axios.get(`http://localhost:8000/api/post/${id}`);
@@ -62,7 +60,7 @@ export default function App () {
     catch (error) {
       console.log(error)
     }
-  }
+}
 
 const updatePost = async (id, type, title, content) => {
     try {
@@ -97,7 +95,7 @@ const deletePost = async (id) => {
        <div className="main-container">
         <LeftSide />
         <Routes>
-          <Route path='/' element={<PostList posts={ posts  } />}></Route>
+          <Route path='/' element={<PostList posts={  posts  } />}></Route>
           <Route path='/createPost' element={ <CreatePost onFormSubmit= {onFormSubmit} /> }></Route>
           <Route path='/post/:id' element={ <ShowPost getPost={getPost} post= {post} /> }></Route>
           <Route path='/post/update/:id' element = {<EditPost getPost={getPost} post= {post} Edit= {updatePost}/>}></Route>
