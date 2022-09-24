@@ -9,18 +9,21 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import CreatePost from './Components/CreatePost'
 import ShowPost from './Components/ShowPost'
 import EditPost from './Components/EditPost'
+import DeletePost from './Components/DeletePost'
 
 export default function App () {
   const [posts, setPosts] = useState([])
   const [post, setPost] = useState({})
-  // const [loader, setLoader] = useState(false)
+  // const [loading, setLoading] = useState(false)
   const navigate = useNavigate();
 
   useEffect(() => {
+    // setLoading(true)
     fetchPosts().then(res => {
         // check status for response and set data accordingly
 
         setPosts(res.data.Posts);
+        // setLoading(false)
         // log the data
         // console.log(res.data)
     })  
@@ -68,26 +71,39 @@ const updatePost = async (id, type, title, content) => {
         title: title,
         content: content
       });
+    fetchPosts();
    setTimeout(() => {
     navigate('/')
-   }, 700);
+   }, 500);
     } catch (error) {
       console.log(error)
     }
-  }
-
-  
-    return (
+}
+const deletePost = async (id) => {
+  try{
+    alert('Do you want to delete this post ? ');
+    await axios.delete(`http://localhost:8000/api/post/delete/${id}`);
+    
+    }
+    catch (error) {
+      console.log(error)
+    }
+}
+   return (
       <>
-      <Navbar />
-      <div className="main-container">
+      <div className="nav-container">
+        <Navbar />
+      </div>
+       <div className="main-container">
         <LeftSide />
         <Routes>
-          <Route path='/' element={<PostList posts={posts} />}></Route>
+          <Route path='/' element={<PostList posts={ posts  } />}></Route>
           <Route path='/createPost' element={ <CreatePost onFormSubmit= {onFormSubmit} /> }></Route>
           <Route path='/post/:id' element={ <ShowPost getPost={getPost} post= {post} /> }></Route>
           <Route path='/post/update/:id' element = {<EditPost getPost={getPost} post= {post} Edit= {updatePost}/>}></Route>
+          <Route path='/post/delete/:id' element = {<DeletePost  Delete={deletePost} />}></Route>
         </Routes>
+      
         <RightSide />
         </div>
       </>

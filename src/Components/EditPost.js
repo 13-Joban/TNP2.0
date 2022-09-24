@@ -3,10 +3,9 @@ import { useParams } from 'react-router-dom';
 
 export default function EditPost(props) {
     const {id} = useParams();
-  
-  useEffect(()=> {
-    props.getPost(id)
-  }, [])
+    useEffect(() => {
+      props.getPost(id);
+    }, [])
 
    const fetchedpost = props.post;
    const [type, setType] = useState(fetchedpost.type);

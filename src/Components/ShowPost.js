@@ -6,7 +6,6 @@ export default function ShowPost(props) {
   // const post = props.post;
   const {id} = useParams();
   useEffect(()=> {
-
     props.getPost(id);
   }, [])
   const { type, title, content} = props.post;
@@ -21,8 +20,8 @@ export default function ShowPost(props) {
       <p className="card-text content-fullpost">{content}</p>
     </div>
   <div className="btns">
-    <Link to= {`/post/update/${id}`} className="btn btn-info btn-lg">Edit Post</Link>
-    <Link to= {`/post/delete/${id}`} className="btn btn-danger btn-lg">Delete Post</Link>
+    <Link to= {`/post/update/${id}`} className="btn btn-info ">Edit Post</Link>
+    <Link to= {`/post/delete/${id}`} className="btn btn-danger">Delete Post</Link>
   </div>
   </div>
   )
