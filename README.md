@@ -42,10 +42,9 @@ Runs the app in the development mode.\![Screenshot (350)](https://user-images.gi
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## For Backend
-    cd backend\
-    php artisan serve\
-    Make sure that you have created a new laravel app backend if not then use  laravel new backend \
-  
-    Note -- Make sure that xampp server is on for running  Databse
+    cd backend
+    php artisan serve
+Make sure that you have created a new laravel app backend if not then use  laravel new backend
+Note -- Make sure that xampp server is on for running  Databse
  
 
